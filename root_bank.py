@@ -21,22 +21,23 @@ root.grid_columnconfigure(1, weight=1)
 
 #frame1
 lb1 = Label(frame1, text='Bem vindo ao Manus Bank', font='Arial 20')
-bt1 = Button(frame1, text="Fazer login!", font= 'arial 20', bg= '#0a0a0a', fg='#35a852', command=lambda: [frame1.pack_forget(), frame2.pack()])
+bt1 = Button(frame1, text="Fazer login!", font= 'arial 20', bg= '#7a0158', fg='#f7f7f7', command=lambda: [frame1.pack_forget(), frame2.pack()])
 
 
 
 #frame2
-lb5 = Label(frame2, text='Acesse sua conta', font= 'arial 25', bg= '#32a852', fg='#050505')
-lb6 = Label(frame2, text='Login:', font='arial 25', bg= '#35a852', fg= '#050505')
+lb5 = Label(frame2, text='Acesse sua conta', font= 'arial 25', bg= '#7a0158', fg='#f7f7f7')
+lb6 = Label(frame2, text='Login:', font='arial 25', bg= '#7a0158', fg= '#f7f7f7')
 en1 = Entry(frame2, font= 'arial 18',  bg = '#f7f7f7', fg = '#050505' )
-lb7 = Label(frame2, text= 'Senha:', font='arial 25', bg='#35a852', fg='#050505')
+lb7 = Label(frame2, text= 'Senha:', font='arial 25', bg='#7a0158', fg='#f7f7f7')
 en2 = Entry(frame2,font= 'arial 25',  bg = '#f7f7f7', fg = '#050505' )
-bt2 = Button(frame2, text="Fazer login!", font= 'arial 20', bg= '#0a0a0a', fg='#35a852', command=lambda: [frame2.pack_forget(), frame3.pack()])
-bt3= Button(frame2, text='Voltar', font= 'arial 20', command= lambda: [frame3.pack_forget(), frame2.pack()])
+bt2 = Button(frame2, text="Fazer login!", font= 'arial 20', bg= '#7a0158', fg='#f7f7f7', command=lambda: [frame2.pack_forget(), frame3.pack()])
+bt3= Button(frame2, text='Voltar', font= 'arial 20', command= lambda: [frame2.pack_forget(), frame1.pack()])
 
 #frame3
 bt8= Button(frame3, text='Voltar', font= 'arial 20', command= lambda: [frame3.pack_forget(), frame2.pack()])
-lb8 = Label(frame3,text='Bem vindo, Mateus!', font='arial 30',bg='#35a852', fg='#050505')
+bt9= Button(frame3, text='Voltar ao início', font= 'arial 20', command= lambda: [frame3.pack_forget(), frame1.pack()])
+lb8 = Label(frame3,text='Bem vindo, Zé!', font='arial 30',bg='#7a0158', fg='#f7f7f7')
 frame1.pack()
 
 
@@ -57,13 +58,14 @@ lb7.grid(row=2, column=0,sticky=NSEW)
 en1.grid(row=1 ,column=1, sticky=NSEW)
 en2.grid(row=2   ,column=1,sticky=NSEW)
 bt2.grid(row=3, column= 1, sticky=NSEW)
-
+bt3.grid(row=3, column=0, sticky=NSEW)
 
 
 
 #frame3
 bt8.grid(row=1, column=0, sticky=NSEW)
 lb8.grid(row= 0, column=0, columnspan=4, sticky=NSEW)
+bt9.grid(row=1, column=1, sticky=NSEW)
 
 
 
